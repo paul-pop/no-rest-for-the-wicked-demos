@@ -1,7 +1,6 @@
 # No REST for the wicked talk
 
-These are a set of demos to support the 'No REST for the wicked' talk. The slides can be found in the [docs](docs/) folder or on the
-[GitHub page](https://paul-pop.github.io/no-rest-for-the-wicked-demos/docs)
+These are a set of demos to support the 'No REST for the wicked' talk. The slides can be found on the [GitHub page](https://paul-pop.github.io/no-rest-for-the-wicked-demos/docs).
 
 ## Structure
 
