@@ -1,0 +1,24 @@
+type Query {
+    info: String
+}
+
+type Subscription {
+    tweets: Tweet
+}
+
+type Tweet {
+    id: ID!
+    body: String
+    date: Date
+    author: Author
+}
+
+type Author {
+    id: ID!
+    name: String
+    screenName: String
+    profileImageURL: String
+    followers: Int
+}
+
+scalar Date

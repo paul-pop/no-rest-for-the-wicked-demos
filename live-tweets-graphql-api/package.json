@@ -1,0 +1,15 @@
+{
+  "name": "tweet-list",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "author": "Paul Pop <paulpop88@gmail.com>",
+  "private": true,
+  "scripts": {
+    "start": "KAFKA_TOPIC=twitter node src/index.js"
+  },
+  "dependencies": {
+    "graphql-kafka-subscriptions": "^0.2.3",
+    "graphql-yoga": "^1.16.2"
+  }
+}
