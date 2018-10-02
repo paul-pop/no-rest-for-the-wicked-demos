@@ -3,7 +3,6 @@
 This contains a [Compose file](docker-compose.yml) used to create a Kafka/ZK Confluent cluster with a single broker.
 
 It also contains:
-- Kafka Schema Registry
 - Kafka Connect
 - Kafka Connect UI
 
@@ -18,7 +17,6 @@ docker-compose up
 Then you can access:
 * Kafka broker - localhost:9092
 * Zookeper - localhost:2181
-* Kafka Schema Registry - localhost:8081
 * Kafka Connect - localhost:8083
 * Kafka Connect UI - http://localhost:8003
 
