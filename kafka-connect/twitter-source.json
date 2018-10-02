@@ -1,0 +1,14 @@
+{
+  "name": "twitter_source",
+  "config": {
+    "connector.class": "com.github.jcustenborder.kafka.connect.twitter.TwitterSourceConnector",
+    "tasks.max": "1",
+    "kafka.status.topic": "twitter",
+    "process.deletes": true,
+    "filter.keywords": "@paulicipop",
+    "twitter.oauth.consumerKey": "",
+    "twitter.oauth.consumerSecret": "",
+    "twitter.oauth.accessToken": "",
+    "twitter.oauth.accessTokenSecret": ""
+  }
+}
