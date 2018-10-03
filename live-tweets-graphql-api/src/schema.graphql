@@ -17,7 +17,7 @@ type Author {
     id: ID!
     name: String
     screenName: String
-    profileImageURL: String
+    avatarUrl: String
     followers: Int
 }
 

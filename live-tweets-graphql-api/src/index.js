@@ -24,7 +24,7 @@ const resolvers = {
                         id: payload.User.Id,
                         name: payload.User.Name,
                         screenName: payload.User.ScreenName,
-                        profileImageURL: payload.User.BiggerProfileImageURL,
+                        avatarUrl: payload.User.BiggerProfileImageURL,
                         followers: payload.User.FollowersCount
                     }
                 };
