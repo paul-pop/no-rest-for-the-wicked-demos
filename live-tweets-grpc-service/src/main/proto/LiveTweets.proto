@@ -1,0 +1,31 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.paulpop.livetweets.proto;
+
+message TweetsRequest {
+    repeated string filters = 1;
+}
+
+message TweetsList {
+    repeated Tweet tweets = 1;
+}
+
+message Tweet {
+    int64 id = 1;
+    string body = 2;
+    string date = 3;
+    Author author = 4;
+}
+
+message Author {
+    int64 id = 1;
+    string name = 2;
+    string screenName = 3;
+    string avatarUrl = 4;
+    int32 followers = 5;
+}
+
+service LiveTweetsService {
+    rpc Get (TweetsRequest) returns (TweetsList);
+    rpc Stream (stream TweetsRequest) returns (stream Tweet);
+}
