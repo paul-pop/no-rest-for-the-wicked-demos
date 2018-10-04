@@ -10,8 +10,7 @@ These are a set of demos to support the 'No REST for the wicked' talk. The slide
   * React web app that uses Apollo client to stream the GraphQL subscriptions to a UI.
 * [live-tweets-graphql-api](live-tweets-graphql-api/)
   * GraphQL API that streams tweets from Kafka and exposes the data using GraphQL subscriptions.
-* [live-tweets-grpc-web](live-tweets-grpc-web/)
+* [live-tweets-grpc](live-tweets-grpc/)
+  * gRPC server that streams tweets from Kafka and stores the data in-memory.
   * gRPC client that interacts with the gRPC service to display tweets.
-* [live-tweets-grpc-service](live-tweets-grpc-service/)
-  * gRPC server that streams tweets from Kafka and exposes the data using server-streaming.
 

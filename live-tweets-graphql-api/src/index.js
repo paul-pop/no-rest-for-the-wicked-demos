@@ -3,6 +3,7 @@ const {KafkaPubSub} = require('graphql-kafka-subscriptions');
 
 const pubsub = new KafkaPubSub({
     topic: process.env.KAFKA_TOPIC,
+    groupId: 'graphql',
     host: 'localhost',
     port: '9092'
 });
