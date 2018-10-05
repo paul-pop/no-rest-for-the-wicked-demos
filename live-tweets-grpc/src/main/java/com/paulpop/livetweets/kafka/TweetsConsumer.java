@@ -25,13 +25,14 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class TweetsConsumer {
 
     private static final Logger LOG = LoggerFactory.getLogger(TweetsConsumer.class);
-    private static final String BROKERS = "localhost:9092";
+    private static final String BROKER_LIST = "localhost:9092";
     private static final String GROUP_ID = "grpc";
     private static final String TOPIC = "twitter";
 
+    // Data structure where we store all tweets in memory
     private final List<Tweet> tweets = new CopyOnWriteArrayList<>();
 
-    public TweetsConsumer run() {
+    public void run() {
         KafkaConsumer<JsonNode, JsonNode> consumer = new KafkaConsumer<>(createProperties());
         consumer.subscribe(Collections.singletonList(TOPIC));
         try {
@@ -65,8 +66,6 @@ public class TweetsConsumer {
         } finally {
             consumer.close();
         }
-
-        return this;
     }
 
     public List<Tweet> getTweets() {
@@ -75,7 +74,7 @@ public class TweetsConsumer {
 
     private Properties createProperties() {
         Properties properties = new Properties();
-        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, BROKERS);
+        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, BROKER_LIST);
         properties.put(ConsumerConfig.GROUP_ID_CONFIG, GROUP_ID);
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
