@@ -26,8 +26,8 @@ We will be running a benchmark of this server from our local using the following
 
 ```bash
 ghz -proto src/main/proto/LiveTweets.proto -call livetweets.LiveTweetsService.Get -d '{}' \
-    -n 20000 -c 1000 -insecure -O html -o benchmark.html 0.0.0.0:8080
+    -n 100000 -c 1000 -insecure -O html -o benchmark.html 0.0.0.0:8080
 ```
 
-which means the tool will invoke the gRPC server 20000 times with 1000 concurrent users. The data will be exported
-to [benchmark.html](benchmark.html/).
+which means gRPC client in ghz will invoke the gRPC server 100k times using 1000 concurrent users. 
+The data will be exported to [benchmark.html](benchmark.html/).
