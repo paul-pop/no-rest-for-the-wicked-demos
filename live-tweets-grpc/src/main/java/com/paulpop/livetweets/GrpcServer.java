@@ -1,5 +1,6 @@
 package com.paulpop.livetweets;
 
+import com.paulpop.livetweets.kafka.TweetsConsumer;
 import com.paulpop.livetweets.service.LiveTweetsService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -17,14 +18,16 @@ public class GrpcServer {
     private static final int PORT = 8080;
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        Server server = ServerBuilder
+        final TweetsConsumer consumer = new TweetsConsumer();
+        final Server server = ServerBuilder
                 .forPort(PORT)
-                .addService(new LiveTweetsService())
-                .build();
+                .addService(new LiveTweetsService(consumer))
+                .build()
+                .start();
 
-        server.start();
-        LOG.info("Server started on port " + PORT);
+        LOG.info(String.format("Server started on port %s. Streaming tweets...", PORT));
 
+        consumer.run();
         server.awaitTermination();
     }
 

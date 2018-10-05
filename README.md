@@ -13,4 +13,5 @@ These are a set of demos to support the 'No REST for the wicked' talk. The slide
 * [live-tweets-grpc](live-tweets-grpc/)
   * gRPC server that streams tweets from Kafka and stores the data in-memory.
   * gRPC client that interacts with the gRPC service to display tweets.
+  * [ghz](https://github.com/bojand/ghz) script that load tests the gRPC server.
 

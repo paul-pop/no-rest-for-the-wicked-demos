@@ -1,12 +1,11 @@
 syntax = "proto3";
 option java_multiple_files = true;
-package com.paulpop.livetweets.proto;
+package livetweets;
 
 message TweetsRequest {
-    repeated string filters = 1;
 }
 
-message TweetsList {
+message TweetsResponse {
     repeated Tweet tweets = 1;
 }
 
@@ -26,6 +25,5 @@ message Author {
 }
 
 service LiveTweetsService {
-    rpc Get (TweetsRequest) returns (TweetsList);
-    rpc Stream (stream TweetsRequest) returns (stream Tweet);
+    rpc Get (TweetsRequest) returns (TweetsResponse);
 }

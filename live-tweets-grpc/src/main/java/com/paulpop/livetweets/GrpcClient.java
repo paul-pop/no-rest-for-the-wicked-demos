@@ -1,10 +1,10 @@
 package com.paulpop.livetweets;
 
-import com.paulpop.livetweets.proto.LiveTweetsServiceGrpc;
-import com.paulpop.livetweets.proto.TweetsList;
-import com.paulpop.livetweets.proto.TweetsRequest;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import livetweets.LiveTweetsServiceGrpc;
+import livetweets.TweetsRequest;
+import livetweets.TweetsResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,10 +23,8 @@ public class GrpcClient {
                 .build();
 
         LiveTweetsServiceGrpc.LiveTweetsServiceBlockingStub stub = LiveTweetsServiceGrpc.newBlockingStub(channel);
-
-        TweetsList response = stub.get(TweetsRequest.newBuilder().build());
-
-        LOG.info("Response" + response.toString());
+        TweetsResponse response = stub.get(TweetsRequest.newBuilder().build());
+        LOG.info("Received: " + response.getTweetsList());
 
         channel.shutdown();
     }
