@@ -36,22 +36,21 @@ curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" \
 
 2. Secondly, you can either run the gRPC or the GraphQL demos.
 
-2.1 gRPC
+    2.1 gRPC
 
-Navigate to the [live-tweets-grpc](live-tweets-grpc/) folder and run the server main class and the client main class.
-Kafka should be running for this to start correctly.
+    Navigate to the [live-tweets-grpc](live-tweets-grpc/) folder and run the server main class and the client main class.
+    Kafka should be running for this to start correctly.
 
-2.2 GraphQL
+    2.2 GraphQL
 
-You need to run the GraphQL server by going into [live-tweets-graphql-api](live-tweets-graphql-api/) and executing:
+    You need to run the GraphQL server by going into [live-tweets-graphql-api](live-tweets-graphql-api/) and executing:
 
-```bash
-yarn start
-```
-
-then start the front-end from [live-tweets-apollo-react](live-tweets-apollo-react/) by executing:
-
-```bash
-yarn start
-```
-
+    ```bash
+    yarn start
+    ```
+    
+    then start the front-end from [live-tweets-apollo-react](live-tweets-apollo-react/) by executing:
+    
+    ```bash
+    yarn start
+    ```
