@@ -41,8 +41,7 @@ public class TweetsConsumer {
                 for (ConsumerRecord<JsonNode, JsonNode> record : records) {
                     // Get the payload and add the tweet to the synchronised list
                     JsonNode node = record.value().get("payload");
-
-                    tweets.add(Tweet.newBuilder()
+                    Tweet tweet = Tweet.newBuilder()
                             .setId(node.get("Id").asLong())
                             .setBody(node.get("Text").asText())
                             .setDate(Instant
@@ -58,7 +57,11 @@ public class TweetsConsumer {
                                     .setFollowers(node.get("User").get("FollowersCount").asInt())
                                     .build())
                             .setId(node.get("Id").asLong())
-                            .build());
+                            .build();
+
+                    LOG.info("Tweet found {}", tweet.toString());
+
+                    tweets.add(tweet);
                 }
             }
         } catch (Exception ex) {
