@@ -22,7 +22,8 @@ public class GrpcClient {
                 .usePlaintext()
                 .build();
 
-        LiveTweetsServiceGrpc.LiveTweetsServiceBlockingStub stub = LiveTweetsServiceGrpc.newBlockingStub(channel);
+        LiveTweetsServiceGrpc.LiveTweetsServiceBlockingStub stub =
+                LiveTweetsServiceGrpc.newBlockingStub(channel);
         TweetsResponse response = stub.get(TweetsRequest.newBuilder().build());
         LOG.info("Received: " + response.getTweetsList());
 
