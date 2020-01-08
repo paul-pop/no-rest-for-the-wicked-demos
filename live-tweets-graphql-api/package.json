@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "graphql-kafka-subscriptions": "^0.2.3",
-    "graphql-yoga": "^1.16.2"
+    "graphql-yoga": "^1.18.1"
   }
 }
