@@ -1,0 +1,16 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - graphql-yoga > graphql-import > lodash:
+        patched: '2020-05-01T06:15:33.960Z'
+    - graphql-yoga > graphql-playground-middleware-express > graphql-playground-html > graphql-config > lodash:
+        patched: '2020-05-01T06:15:33.960Z'
+    - graphql-yoga > graphql-playground-middleware-lambda > graphql-playground-html > graphql-config > lodash:
+        patched: '2020-05-01T06:15:33.960Z'
+    - graphql-yoga > graphql-playground-middleware-express > graphql-playground-html > graphql-config > graphql-import > lodash:
+        patched: '2020-05-01T06:15:33.960Z'
+    - graphql-yoga > graphql-playground-middleware-lambda > graphql-playground-html > graphql-config > graphql-import > lodash:
+        patched: '2020-05-01T06:15:33.960Z'
