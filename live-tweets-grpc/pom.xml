@@ -9,10 +9,10 @@
     <name>Live Tweets gRPC Service and Client</name>
 
     <properties>
-        <jackson.version>2.9.7</jackson.version>
-        <grpc.version>1.15.1</grpc.version>
-        <kafka.client.version>2.0.0</kafka.client.version>
-        <logback.version>1.2.3</logback.version>
+        <jackson.version>2.9.10.8</jackson.version>
+        <grpc.version>1.41.2</grpc.version>
+        <kafka.client.version>2.6.2</kafka.client.version>
+        <logback.version>1.2.7</logback.version>
 
         <os.maven.plugin>1.6.0</os.maven.plugin>
         <protobuf.maven.plugin>0.6.1</protobuf.maven.plugin>
