@@ -11,7 +11,7 @@
     <properties>
         <jackson.version>2.9.7</jackson.version>
         <grpc.version>1.15.1</grpc.version>
-        <kafka.client.version>2.0.0</kafka.client.version>
+        <kafka.client.version>3.2.0</kafka.client.version>
         <logback.version>1.2.3</logback.version>
 
         <os.maven.plugin>1.6.0</os.maven.plugin>
